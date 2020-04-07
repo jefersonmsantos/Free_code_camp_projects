@@ -1,0 +1,34 @@
+<html>
+
+</html>
+
+<script>
+
+const palindromes = function(word){
+    word = word.toLowerCase();
+    word = word.replace(/\s+/g,"");
+    word = word.replace(/,/g,"");
+    word = word.replace(/_/g,"");
+    word = word.replace(/\./g,"");
+    word = word.replace(/-/g,"");
+    word = word.replace(/:/g,"");
+    word = word.replace(/\)/g,"");
+    word = word.replace(/\(/g,"");
+    word = word.replace(/\//g,"");
+    word = word.replace(/\\/g,"");
+    word = word.replace(/\|/g,"");
+
+    let letters = word.split("");
+    let reverseLetters = letters.reverse();
+
+    const newWord = reverseLetters.reduce(function(total,letter){
+        return total + letter;
+    },"");
+   
+    console.log(newWord);
+    console.log(reverseLetters);
+    console.log(newWord == word);
+}
+
+
+</script>
